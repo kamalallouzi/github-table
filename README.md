@@ -7,7 +7,9 @@ See [http://jsfiddle.net/kamalallouzi/wvo36u8e/](http://jsfiddle.net/kamalallouz
 What does it do?
 ================
 
-It makes a table out of repositories that stays up to date with one or more github profiles
+It makes a table out of repositories that stays up to date with one or more github profiles.
+
+The table can be added to any website/webpage that you desire.
 
 This can be accomplished from the github JSON-P taken from each profile.
 

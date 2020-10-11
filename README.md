@@ -1,7 +1,7 @@
 Demo
 ====
 
-See [http://jsfiddle.net/kamalallouzi/wvo36u8e/](http://jsfiddle.net/kamalallouzi/wvo36u8e/) for an example.
+See [http://jsfiddle.net/kamalallouzi/wvo36u8e/](http://jsfiddle.net/kamalallouzi/wvo36u8e/) for an example. (Hit run again if it does not work the first time)
 
 
 What does it do?
@@ -32,3 +32,7 @@ At the very top of the javascript file, replace "USERNAME" in the getJSON functi
 Last is to add " onLoad="makeTable()" " to the body tag of your html file.
 
 From there you can style it as you like as a normal html table in css as you desire.
+
+Things to keep in mind
+---------
+The github api has a certain limit per ip to the local requests you can make to it. (learned it the hard way)

@@ -38,3 +38,5 @@ From there you can style it as you like as a normal html table in css as you des
 Things to keep in mind
 ---------
 The github api has a certain limit per ip to the local requests you can make to it. (learned it the hard way)
+
+You need a "?callback" at the end of your github api link to work with the getJSON function.

@@ -1,44 +1,42 @@
-/** @preserve https://github.com/kamalallouzi/github-table
-Copyright (c) 2020 Kamal Allouzi
-Released under the MIT licence: http://opensource.org/licenses/mit-license
- */
-var myList;
+var List;
+// stores url to make into anchor
 var link = [];
+// grabs JSONP from github api
 $.getJSON('https://api.github.com/users/USERNAME/repos?callback', function(data) {
-  myList = data;
+  List = data;
 });
 
-function myJsonMethod(response) {
-  console.log(response);
-  myList = response;
-}
-
 function makeTable() {
-  var test = returnList(myList);
+  var test = returnList(List);
   var columnData = [];
   var rowClose = $('<tr/>');
   for (var i = 0; i < test.length; i++) {
-    var rowData = myList[i];
+    var rowData = List[i];
     for (var row in rowData) {
+    // goes through and filters only necessary elements
       if ($.inArray(row, columnData) == -1 && (row == "name" || row == "description" || row == "language" || row == "html_url")) {
+      // stores links in List array
         if (row == "html_url") {
-          link.push(myList[i]["html_url"]);
-        } else {
+          link.push(List[i]["html_url"]);
+        } 
+        else {
           columnData.push(row);
         }
       }
     }
   }
 
-  for (var i = 0, j = 0; i < myList.length; i++) {
+  for (var i = 0, j = 0; i < List.length; i++) {
     var rowClose = $('<tr/>');
     for (var colIndex = 0; colIndex < columnData.length; colIndex++) {
       var cell;
       if (columnData[colIndex] == "name") {
-        cell = '<a href=' + link[j] + ' target="_blank">' + myList[i][columnData[colIndex]] + '</a>';
+      // makes anchor with the title with List
+        cell = '<a href=' + link[j] + ' target="_blank">' + List[i][columnData[colIndex]] + '</a>';
         j++;
-      } else {
-        cell = myList[i][columnData[colIndex]];
+      } 
+      else {
+        cell = List[i][columnData[colIndex]];
       }
       if (cell == null) {
         cell = "";
@@ -49,6 +47,6 @@ function makeTable() {
   }
 }
 
-function returnList(myList) {
-  return myList;
+function returnList(List) {
+  return List;
 }

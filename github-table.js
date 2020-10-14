@@ -1,3 +1,7 @@
+/** @preserve https://github.com/kamalallouzi/github-table
+Copyright (c) 2020 Kamal Allouzi
+Released under the MIT licence: http://opensource.org/licenses/mit-license
+ */
 var myList;
 var link = [];
 $.getJSON('https://api.github.com/users/USERNAME/repos?callback', function(data) {

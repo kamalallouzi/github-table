@@ -1,3 +1,7 @@
+/** @preserve https://github.com/kamalallouzi/github-table
+Copyright (c) 2020 - Kamal Allouzi
+Released under the MIT licence: http://opensource.org/licenses/mit-license
+ */
 var List;
 // stores url to make into anchor
 var link = [];
